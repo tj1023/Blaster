@@ -145,3 +145,8 @@ void ABlasterCharacter::OnRep_OverlappingWeapon(AWeapon* LastWeapon)
 		LastWeapon->ShowPickupWidget(false);
 	}
 }
+
+bool ABlasterCharacter::IsWeaponEquipped()
+{
+	return Combat && Combat->EquippedWeapon;
+}
